@@ -1,0 +1,302 @@
+[
+  {
+    "puzzle_id": 0,
+    "seed": 42,
+    "num_givens": 30,
+    "num_injected_misreads": 2,
+    "injected_cells": [
+      {
+        "cell": [
+          0,
+          4
+        ],
+        "true_digit": 2,
+        "intended_read_digit": 1,
+        "alpha_blend": 0.57,
+        "source_test_idx_true": 38,
+        "source_test_idx_confuser": 8113
+      },
+      {
+        "cell": [
+          6,
+          2
+        ],
+        "true_digit": 6,
+        "intended_read_digit": 8,
+        "alpha_blend": 0.495,
+        "source_test_idx_true": 2240,
+        "source_test_idx_confuser": 7563
+      }
+    ]
+  },
+  {
+    "puzzle_id": 1,
+    "seed": 43,
+    "num_givens": 30,
+    "num_injected_misreads": 2,
+    "injected_cells": [
+      {
+        "cell": [
+          2,
+          0
+        ],
+        "true_digit": 4,
+        "intended_read_digit": 8,
+        "alpha_blend": 0.42,
+        "source_test_idx_true": 7919,
+        "source_test_idx_confuser": 7090
+      },
+      {
+        "cell": [
+          6,
+          7
+        ],
+        "true_digit": 1,
+        "intended_read_digit": 4,
+        "alpha_blend": 0.495,
+        "source_test_idx_true": 4479,
+        "source_test_idx_confuser": 6311
+      }
+    ]
+  },
+  {
+    "puzzle_id": 2,
+    "seed": 44,
+    "num_givens": 30,
+    "num_injected_misreads": 2,
+    "injected_cells": [
+      {
+        "cell": [
+          0,
+          0
+        ],
+        "true_digit": 1,
+        "intended_read_digit": 8,
+        "alpha_blend": 0.42,
+        "source_test_idx_true": 8111,
+        "source_test_idx_confuser": 7311
+      },
+      {
+        "cell": [
+          3,
+          8
+        ],
+        "true_digit": 7,
+        "intended_read_digit": 9,
+        "alpha_blend": 0.42,
+        "source_test_idx_true": 5773,
+        "source_test_idx_confuser": 2690
+      }
+    ]
+  },
+  {
+    "puzzle_id": 3,
+    "seed": 45,
+    "num_givens": 30,
+    "num_injected_misreads": 2,
+    "injected_cells": [
+      {
+        "cell": [
+          1,
+          6
+        ],
+        "true_digit": 6,
+        "intended_read_digit": 2,
+        "alpha_blend": 0.62,
+        "source_test_idx_true": 8290,
+        "source_test_idx_confuser": 8243
+      },
+      {
+        "cell": [
+          5,
+          2
+        ],
+        "true_digit": 5,
+        "intended_read_digit": 9,
+        "alpha_blend": 0.595,
+        "source_test_idx_true": 5052,
+        "source_test_idx_confuser": 7808
+      }
+    ]
+  },
+  {
+    "puzzle_id": 4,
+    "seed": 46,
+    "num_givens": 30,
+    "num_injected_misreads": 2,
+    "injected_cells": [
+      {
+        "cell": [
+          6,
+          6
+        ],
+        "true_digit": 3,
+        "intended_read_digit": 6,
+        "alpha_blend": 0.595,
+        "source_test_idx_true": 8571,
+        "source_test_idx_confuser": 8985
+      },
+      {
+        "cell": [
+          8,
+          0
+        ],
+        "true_digit": 6,
+        "intended_read_digit": 9,
+        "alpha_blend": 0.52,
+        "source_test_idx_true": 6507,
+        "source_test_idx_confuser": 1946
+      }
+    ]
+  },
+  {
+    "puzzle_id": 5,
+    "seed": 47,
+    "num_givens": 30,
+    "num_injected_misreads": 2,
+    "injected_cells": [
+      {
+        "cell": [
+          5,
+          8
+        ],
+        "true_digit": 4,
+        "intended_read_digit": 7,
+        "alpha_blend": 0.47,
+        "source_test_idx_true": 1337,
+        "source_test_idx_confuser": 1881
+      },
+      {
+        "cell": [
+          7,
+          6
+        ],
+        "true_digit": 8,
+        "intended_read_digit": 3,
+        "alpha_blend": 0.445,
+        "source_test_idx_true": 3229,
+        "source_test_idx_confuser": 2653
+      }
+    ]
+  },
+  {
+    "puzzle_id": 6,
+    "seed": 48,
+    "num_givens": 30,
+    "num_injected_misreads": 2,
+    "injected_cells": [
+      {
+        "cell": [
+          2,
+          5
+        ],
+        "true_digit": 6,
+        "intended_read_digit": 4,
+        "alpha_blend": 0.42,
+        "source_test_idx_true": 3291,
+        "source_test_idx_confuser": 4011
+      },
+      {
+        "cell": [
+          7,
+          3
+        ],
+        "true_digit": 1,
+        "intended_read_digit": 9,
+        "alpha_blend": 0.62,
+        "source_test_idx_true": 2861,
+        "source_test_idx_confuser": 5413
+      }
+    ]
+  },
+  {
+    "puzzle_id": 7,
+    "seed": 49,
+    "num_givens": 30,
+    "num_injected_misreads": 2,
+    "injected_cells": [
+      {
+        "cell": [
+          1,
+          6
+        ],
+        "true_digit": 5,
+        "intended_read_digit": 9,
+        "alpha_blend": 0.62,
+        "source_test_idx_true": 5564,
+        "source_test_idx_confuser": 3769
+      },
+      {
+        "cell": [
+          7,
+          0
+        ],
+        "true_digit": 4,
+        "intended_read_digit": 8,
+        "alpha_blend": 0.52,
+        "source_test_idx_true": 2159,
+        "source_test_idx_confuser": 3366
+      }
+    ]
+  },
+  {
+    "puzzle_id": 8,
+    "seed": 50,
+    "num_givens": 30,
+    "num_injected_misreads": 2,
+    "injected_cells": [
+      {
+        "cell": [
+          2,
+          3
+        ],
+        "true_digit": 4,
+        "intended_read_digit": 2,
+        "alpha_blend": 0.62,
+        "source_test_idx_true": 147,
+        "source_test_idx_confuser": 2847
+      },
+      {
+        "cell": [
+          7,
+          1
+        ],
+        "true_digit": 4,
+        "intended_read_digit": 2,
+        "alpha_blend": 0.62,
+        "source_test_idx_true": 5038,
+        "source_test_idx_confuser": 5534
+      }
+    ]
+  },
+  {
+    "puzzle_id": 9,
+    "seed": 51,
+    "num_givens": 30,
+    "num_injected_misreads": 2,
+    "injected_cells": [
+      {
+        "cell": [
+          5,
+          3
+        ],
+        "true_digit": 8,
+        "intended_read_digit": 3,
+        "alpha_blend": 0.42,
+        "source_test_idx_true": 8219,
+        "source_test_idx_confuser": 8084
+      },
+      {
+        "cell": [
+          7,
+          8
+        ],
+        "true_digit": 8,
+        "intended_read_digit": 9,
+        "alpha_blend": 0.645,
+        "source_test_idx_true": 3078,
+        "source_test_idx_confuser": 7482
+      }
+    ]
+  }
+]
