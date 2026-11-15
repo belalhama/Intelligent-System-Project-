@@ -1,0 +1,82 @@
+[
+  {
+    "dataset_or_table": "mnist_1to9.npz",
+    "column_or_field": "X_train",
+    "shape_and_dtype": "(45073, 28, 28) float32",
+    "range_or_domain": "[0.0, 1.0]",
+    "real_or_generated": "Real",
+    "generation_or_preprocessing_rule": "Real MNIST training images (from 50,000 train split, seed=42) with label != 0, scaled by dividing uint8 pixel values by 255.0."
+  },
+  {
+    "dataset_or_table": "mnist_1to9.npz",
+    "column_or_field": "y_train",
+    "shape_and_dtype": "(45073,) int64",
+    "range_or_domain": "{1..9}",
+    "real_or_generated": "Real",
+    "generation_or_preprocessing_rule": "Real human writer digit labels from MNIST training split with digit 0 dropped."
+  },
+  {
+    "dataset_or_table": "mnist_1to9.npz",
+    "column_or_field": "X_val",
+    "shape_and_dtype": "(9004, 28, 28) float32",
+    "range_or_domain": "[0.0, 1.0]",
+    "real_or_generated": "Real",
+    "generation_or_preprocessing_rule": "Real MNIST validation images (from 10,000 validation split, seed=42) with label != 0, scaled to [0, 1]. Used for temperature scaling."
+  },
+  {
+    "dataset_or_table": "mnist_1to9.npz",
+    "column_or_field": "y_val",
+    "shape_and_dtype": "(9004,) int64",
+    "range_or_domain": "{1..9}",
+    "real_or_generated": "Real",
+    "generation_or_preprocessing_rule": "Real human writer digit labels for the 10,000 validation split with digit 0 dropped."
+  },
+  {
+    "dataset_or_table": "mnist_1to9.npz",
+    "column_or_field": "X_test",
+    "shape_and_dtype": "(9020, 28, 28) float32",
+    "range_or_domain": "[0.0, 1.0]",
+    "real_or_generated": "Real",
+    "generation_or_preprocessing_rule": "Untouched 10,000 MNIST test set filtered to digits 1..9 and scaled to [0, 1]."
+  },
+  {
+    "dataset_or_table": "mnist_1to9.npz",
+    "column_or_field": "y_test",
+    "shape_and_dtype": "(9020,) int64",
+    "range_or_domain": "{1..9}",
+    "real_or_generated": "Real",
+    "generation_or_preprocessing_rule": "Real ground-truth labels for the untouched MNIST test set (digits 1..9)."
+  },
+  {
+    "dataset_or_table": "sample_sudoku_mosaics.npz",
+    "column_or_field": "solution_grid",
+    "shape_and_dtype": "(N, 9, 9) int64",
+    "range_or_domain": "{1..9}",
+    "real_or_generated": "Generated",
+    "generation_or_preprocessing_rule": "Built by seeded randomized backtracking satisfying row, column, and 3x3 box all-different constraints."
+  },
+  {
+    "dataset_or_table": "sample_sudoku_mosaics.npz",
+    "column_or_field": "puzzle_grid",
+    "shape_and_dtype": "(N, 9, 9) int64",
+    "range_or_domain": "{0..9}",
+    "real_or_generated": "Generated",
+    "generation_or_preprocessing_rule": "Derived from solution_grid by removing cells in seeded random order while verifying unique solution (count_solutions == 1) until num_givens (25, 30, or 35) remain."
+  },
+  {
+    "dataset_or_table": "sample_sudoku_mosaics.npz",
+    "column_or_field": "cell_images",
+    "shape_and_dtype": "(N, 9, 9, 28, 28) float32",
+    "range_or_domain": "[0.0, 1.0]",
+    "real_or_generated": "Hybrid (Real Test Digits + Generated Layout/Blends)",
+    "generation_or_preprocessing_rule": "Blank cells receive uniform background noise U(0, 0.004) (detected by brightness < 0.025). Standard given cells receive held-out X_test images. Injected hard cells receive documented convex blends (1-alpha)*X_test(d_true) + alpha*X_test(d_confuser)."
+  },
+  {
+    "dataset_or_table": "correction_logs.csv",
+    "column_or_field": "cell, read_digit, new_digit, cost",
+    "shape_and_dtype": "structured log rows",
+    "range_or_domain": "cell in (0..8,0..8), digits in 1..9, cost >= 0",
+    "real_or_generated": "Generated (System Output)",
+    "generation_or_preprocessing_rule": "Produced by A* / UCS / Greedy search; cost = max(0, log P(read_digit|x) - log P(new_digit|x))."
+  }
+]

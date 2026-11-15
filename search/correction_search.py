@@ -518,3 +518,16 @@ def run_small_known_example() -> Dict[str, SearchResult]:
             max_corrections=3,
         )
     return results
+
+
+if __name__ == "__main__":
+    print("Running Small Deterministic Search Example with Known Answer:")
+    res_map = run_small_known_example()
+    for alg_key, r in res_map.items():
+        corrs = [(c.cell, c.read_digit, c.new_digit, round(c.cost, 4)) for c in r.corrections]
+        print(
+            f"  {alg_key.upper():<6} | solved={r.solved} | "
+            f"nodes_expanded={r.nodes_expanded} | nodes_generated={r.nodes_generated} | "
+            f"cost={r.total_cost:.4f} | corrections={corrs}"
+        )
+

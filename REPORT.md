@@ -186,3 +186,4 @@ All three required experiments were executed across **5 independent seeds (`42, 
 ## 7. Conclusions
 
 By integrating a **Temperature-Scaled Neural Network** ($98.04\%$ test accuracy, $\text{ECE}=0.0028$), **A\* Search with an admissible conflict heuristic** ($0$ overestimates across 349 instances, $20\%–28\%$ fewer node expansions than UCS), and a **BT + FC + AC-3 CSP solver** ($78\%–85\%$ fewer backtracks than BT+FC), our system reliably reads, repairs, and solves handwritten Sudoku puzzles that neither a neural network nor a symbolic solver can solve alone.
+

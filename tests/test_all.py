@@ -180,16 +180,18 @@ def test_normal_4_three_misreads_at_max_budget():
 
 
 def test_normal_5_csp_switchable_bt_fc_ac3():
-    """Normal Case 5: Switchable CSP components (BT, BT+FC, BT+FC+AC3) all solve accurately."""
+    """Normal Case 5: Switchable CSP components (BT, BT+FC, BT+AC3, BT+FC+AC3) all solve accurately."""
     puzzle = _sample_35_given_puzzle()
     expected_sol = _sample_valid_solution()
 
     sol_bt, st_bt = solve_sudoku(puzzle, use_fc=False, use_ac3=False)
     sol_fc, st_fc = solve_sudoku(puzzle, use_fc=True, use_ac3=False)
+    sol_ac3_only, st_ac3_only = solve_sudoku(puzzle, use_fc=False, use_ac3=True)
     sol_ac3, st_ac3 = solve_sudoku(puzzle, use_fc=True, use_ac3=True)
 
     assert sol_bt == expected_sol and is_valid_complete_grid(sol_bt)
     assert sol_fc == expected_sol and is_valid_complete_grid(sol_fc)
+    assert sol_ac3_only == expected_sol and is_valid_complete_grid(sol_ac3_only)
     assert sol_ac3 == expected_sol and is_valid_complete_grid(sol_ac3)
 
     # Verify progressive pruning effectiveness: BT+FC+AC3 <= BT+FC <= BT

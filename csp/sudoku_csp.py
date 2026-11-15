@@ -431,3 +431,30 @@ def count_solutions(grid: Grid, max_solutions: int = 2) -> int:
     solutions: List[Grid] = []
     solver._backtrack(assignment, domains, stats, solutions, max_solutions=max_solutions)
     return len(solutions)
+
+
+if __name__ == "__main__":
+    sample_puzzle: Grid = [
+        [5, 3, 4, 0, 7, 0, 0, 1, 0],
+        [6, 7, 0, 1, 9, 5, 0, 0, 0],
+        [0, 9, 8, 0, 0, 0, 0, 6, 0],
+        [8, 0, 0, 0, 6, 0, 0, 0, 3],
+        [4, 0, 0, 8, 0, 3, 0, 0, 1],
+        [7, 0, 0, 0, 2, 0, 0, 0, 6],
+        [0, 6, 0, 0, 0, 0, 2, 8, 0],
+        [0, 0, 0, 4, 1, 9, 0, 3, 0],
+        [0, 4, 0, 0, 8, 0, 1, 7, 9],
+    ]
+    print("CSP Switchable Components Verification (35-Given Puzzle):")
+    for label, fc_flag, ac3_flag in [
+        ("BT (Pure Backtracking)", False, False),
+        ("BT + FC (Forward Checking)", True, False),
+        ("BT + AC-3 (Arc Consistency)", False, True),
+        ("BT + FC + AC-3 (Full)", True, True),
+    ]:
+        sol, st = solve_sudoku(sample_puzzle, use_fc=fc_flag, use_ac3=ac3_flag)
+        print(
+            f"  {label:<30} | solved={st.solved} | assignments={st.assignments:4d} | "
+            f"backtracks={st.backtracks:3d} | pruned={st.values_pruned:3d}"
+        )
+

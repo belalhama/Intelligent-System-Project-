@@ -1,0 +1,11 @@
+dataset_or_table,column_or_field,shape_and_dtype,range_or_domain,real_or_generated,generation_or_preprocessing_rule
+mnist_1to9.npz,X_train,"(45073, 28, 28) float32","[0.0, 1.0]",Real,"Real MNIST training images (from 50,000 train split, seed=42) with label != 0, scaled by dividing uint8 pixel values by 255.0."
+mnist_1to9.npz,y_train,"(45073,) int64",{1..9},Real,Real human writer digit labels from MNIST training split with digit 0 dropped.
+mnist_1to9.npz,X_val,"(9004, 28, 28) float32","[0.0, 1.0]",Real,"Real MNIST validation images (from 10,000 validation split, seed=42) with label != 0, scaled to [0, 1]. Used for temperature scaling."
+mnist_1to9.npz,y_val,"(9004,) int64",{1..9},Real,"Real human writer digit labels for the 10,000 validation split with digit 0 dropped."
+mnist_1to9.npz,X_test,"(9020, 28, 28) float32","[0.0, 1.0]",Real,"Untouched 10,000 MNIST test set filtered to digits 1..9 and scaled to [0, 1]."
+mnist_1to9.npz,y_test,"(9020,) int64",{1..9},Real,Real ground-truth labels for the untouched MNIST test set (digits 1..9).
+sample_sudoku_mosaics.npz,solution_grid,"(N, 9, 9) int64",{1..9},Generated,"Built by seeded randomized backtracking satisfying row, column, and 3x3 box all-different constraints."
+sample_sudoku_mosaics.npz,puzzle_grid,"(N, 9, 9) int64",{0..9},Generated,"Derived from solution_grid by removing cells in seeded random order while verifying unique solution (count_solutions == 1) until num_givens (25, 30, or 35) remain."
+sample_sudoku_mosaics.npz,cell_images,"(N, 9, 9, 28, 28) float32","[0.0, 1.0]",Hybrid (Real Test Digits + Generated Layout/Blends),"Blank cells receive uniform background noise U(0, 0.004) (detected by brightness < 0.025). Standard given cells receive held-out X_test images. Injected hard cells receive documented convex blends (1-alpha)*X_test(d_true) + alpha*X_test(d_confuser)."
+correction_logs.csv,"cell, read_digit, new_digit, cost",structured log rows,"cell in (0..8,0..8), digits in 1..9, cost >= 0",Generated (System Output),"Produced by A* / UCS / Greedy search; cost = max(0, log P(read_digit|x) - log P(new_digit|x))."
