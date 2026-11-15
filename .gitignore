@@ -5,5 +5,3 @@ __pycache__/
 results/.mplconfig/
 data/raw/*.gz
 data/processed/*.npz
-models/*.joblib
-
